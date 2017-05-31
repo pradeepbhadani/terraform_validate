@@ -289,7 +289,7 @@ class TerraformResourceList:
             for resource in self.resource_list:
                 if property_name in resource.config.keys():
                     list.properties.append(TerraformProperty(resource.type,resource.name,property_name,resource.config[property_name]))
-		else:
+                else:
                     errors.append("[{0}.{1}] should have property: '{2}'".format(resource.type,resource.name,property_name))
 
         if len(errors) > 0:
